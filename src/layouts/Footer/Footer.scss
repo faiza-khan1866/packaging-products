@@ -1,0 +1,146 @@
+@import "../../styles/variables";
+footer {
+  color: $white;
+  background: url("../../assets/images/logo/footerbg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 0;
+  @media #{$sm} {
+    padding: 3rem 0 1rem 0;
+  }
+  .layout-footer {
+    .img_wrpae {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 2rem;
+      gap: 10px;
+      figure {
+        margin: 0;
+        overflow: hidden;
+        width: 70px;
+        .footer-logo {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+        }
+      }
+    }
+    p {
+      font-size: 15px;
+    }
+    .footer-social-icons {
+      display: flex;
+      @media #{$sm} {
+        margin-bottom: 2rem;
+      }
+      .icon-wrap-round {
+        border-radius: 50%;
+        border: 1px solid $white;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.25rem;
+        cursor: pointer;
+        .social-icon {
+          color: $white;
+          font-size: 18px;
+        }
+        @media #{$sm} {
+          width: 30px;
+          height: 30px;
+          .social-icon {
+            color: $white;
+            font-size: 16px;
+          }
+        }
+      }
+      .whatsapp_wrape {
+        // position: relative;
+        .popup {
+          // position: absolute;
+          // bottom: 0;
+          // right: 0;
+          margin-top: 0.5rem;
+          background: $white;
+          padding: 0.5rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+          border-radius: 4px;
+          width: 82px;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              font-size: 15px;
+              font-weight: 500;
+              padding: 0.5rem;
+              margin-bottom: 0.5rem;
+              color: $secondary-color;
+              border: 1px solid $secondary-color;
+              border-radius: 2px;
+              cursor: pointer;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              &:hover,
+              &.active {
+                background: $secondary-color;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-links {
+    @media #{$sm} {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 15px;
+      a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-bottom: 0;
+      li {
+        padding-bottom: 0.5rem;
+        &:last-child {
+          padding-bottom: 0;
+        }
+        a {
+          font-size: 15px;
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .head_quat_wrape {
+    margin-top: 2rem;
+    @media #{$sm} {
+      margin-top: 0;
+    }
+  }
+}

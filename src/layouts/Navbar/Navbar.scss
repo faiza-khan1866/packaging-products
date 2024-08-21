@@ -1,0 +1,270 @@
+@import "../../styles/variables";
+.navbar-wrap {
+  &.sticky-top {
+    box-shadow: 0 0 10px #eee;
+  }
+  .badge_icon_wrape {
+    position: relative;
+    .badge_wrape {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $white;
+      background-color: $secondary-color !important;
+      font-size: 10px;
+    }
+  }
+
+  .navbar {
+    background: $white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    z-index: 999;
+    @media #{$sm, $md} {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .navbar-brand {
+      figure {
+        margin: 0;
+        overflow: hidden;
+        width: 220px;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+        @media #{$sm} {
+          width: 150px;
+        }
+      }
+    }
+    .nav-link {
+      font-size: 18px;
+      color: $black;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-family: "Calibri", serif;
+      &:hover,
+      &.active {
+        color: $secondary-color;
+      }
+    }
+
+    .navbar-toggler {
+      padding: 0;
+      border: 0;
+      &:focus {
+        // border: 0.5px solid $secondary-color !important;
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+    .dropdown-menu {
+      background: $secondary-color;
+      border: 0;
+      border-radius: 0;
+      height: 300px;
+      overflow-y: scroll;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 11px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent $secondary-color transparent;
+        z-index: 9999;
+      }
+      .dropdown-item {
+        color: $white;
+        font-weight: 500;
+        font-size: 18px;
+        font-family: "Calibri", serif;
+        &:hover {
+          font-weight: 600;
+          color: $secondary-color;
+          background: $white;
+        }
+        &.active {
+          font-weight: 600;
+          color: $secondary-color;
+          background: $white;
+        }
+      }
+    }
+    .searchbar-icon {
+      position: relative;
+      .search-content {
+        position: absolute;
+        z-index: 1;
+        top: 160%;
+        right: 0;
+        min-width: 600px;
+        padding: 15px;
+        transition: all 0.5s ease 0s;
+        background: #ffffff none repeat scroll 0 0;
+        box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s;
+        @media (min-width: 501px) and (max-width: 991px) {
+          min-width: 350px;
+        }
+        @media only screen and (max-width: 500px) {
+          min-width: 250px;
+        }
+        form {
+          position: relative;
+          input {
+            width: 100%;
+            padding: 5px 72px 5px 15px;
+            transition: all 0.4s ease 0s;
+            color: $black;
+            border: 1px solid #d3d3d3;
+            outline: medium none;
+            background: transparent;
+            &:focus {
+              border: 1px solid $secondary-color;
+            }
+          }
+          .search_suggestions {
+            height: 250px;
+            overflow-y: scroll;
+          }
+          h3 {
+            font-size: 18px;
+            color: $secondary-color;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 14px;
+            margin-bottom: 0.5rem;
+            small {
+              color: #a09f9f;
+            }
+            a {
+              color: $detail_color;
+              text-decoration: none;
+              &:hover {
+                color: $secondary-color;
+              }
+            }
+          }
+
+          .button-search {
+            font-size: 20px;
+            line-height: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: fit-content;
+            padding: 5px 20px 2px;
+            transition: all 0.4s ease 0s;
+            text-transform: uppercase;
+            color: $secondary-color;
+            border: none;
+            border-color: transparent;
+            background: transparent;
+
+            &:hover {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// ********mobile view nabbar css*********
+.offcanvas {
+  &.offcanvas-end {
+    width: 300px;
+  }
+  .offcanvas-header {
+    padding-bottom: 0;
+    .btn-close {
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .mbl_figure {
+      margin: 0;
+      overflow: hidden;
+      width: 180px;
+      .image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .offcanvas-body {
+    .navbar-nav {
+      .nav-link {
+        font-size: 18px;
+        font-family: "Calibri", serif;
+        color: $black;
+        text-transform: capitalize;
+        font-weight: 500;
+        &:hover,
+        &.active {
+          color: $secondary-color;
+          font-weight: 600;
+        }
+      }
+      .dropdown-menu {
+        background: $secondary-color;
+        border: 0;
+        border-radius: 0;
+        .dropdown-item {
+          color: $white;
+          font-weight: 500;
+          font-size: 18px;
+          font-family: "Calibri", serif;
+          &:hover {
+            font-weight: 600;
+            color: $secondary-color;
+            background: $white;
+          }
+          &.active {
+            font-weight: 600;
+            color: $secondary-color;
+            background: $white;
+          }
+        }
+      }
+    }
+    .navbar-icons {
+      @media #{$sm, $md} {
+        display: none;
+      }
+    }
+  }
+}
+
+//mobile view icons
+
+.mbl_view_icons {
+  display: none;
+  @media (min-width: 601px) and (max-width: 991px) {
+    display: block;
+  }
+}
+.mbl_view_serach_icons {
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}

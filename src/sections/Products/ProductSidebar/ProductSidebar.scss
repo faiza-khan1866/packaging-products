@@ -1,0 +1,137 @@
+@import "../../../styles/variables";
+.product-sidebar-wrape {
+  .search-wrape {
+    margin-bottom: 2rem;
+    .form-label {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      color: $black;
+      @media #{$sm, $md} {
+        font-size: 18px;
+      }
+    }
+    .form-control {
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid $black;
+      border-radius: 5px;
+      color: $black;
+      padding: 0.5rem 1rem;
+      border-right: 0;
+
+      &::placeholder {
+        color: rgba(0, 61, 77, 0.5);
+      }
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+    .input-group-text {
+      color: rgba(0, 61, 77, 0.5);
+      background: transparent;
+      border: 1px solid $black;
+    }
+  }
+  .category-wrape {
+    background: $secondary-color;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: $white;
+    p {
+      margin: 0;
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: capitalize;
+      @media #{$sm,$md} {
+        font-size: 16px;
+      }
+    }
+  }
+  .accordion {
+    .accordion-item {
+      background-color: $secondary-color;
+      color: $white;
+      border-left: 0;
+      border-right: 0;
+      border-color: $white;
+      border-radius: 6px;
+      // &:first-of-type {
+      //   border-top-left-radius: 0;
+      //   border-top-right-radius: 0;
+      // }
+      // &:last-of-type {
+      //   border-bottom-right-radius: 6px;
+      //   border-bottom-left-radius: 6px;
+      // }
+      .accordion-collapse {
+        border-top: 0.5px solid $white;
+      }
+      .accordion-header {
+        .accordion-button {
+          font-weight: 400;
+          font-size: 16px;
+          text-transform: uppercase;
+          background: transparent;
+          color: $white;
+          box-shadow: none;
+          @media #{$md} {
+            font-size: 15px;
+          }
+          @media #{$sm} {
+            font-size: 14px;
+          }
+          .collapsed {
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+          }
+          &:not(.collapsed) {
+            color: inherit;
+            box-shadow: none;
+            border: 0;
+            background-color: transparent;
+          }
+          &::after {
+            background-image: url("../../../assets/images/icons/arrowdown.png");
+          }
+        }
+      }
+      .accordion-body {
+        .subcategory_list {
+          .form-check {
+            margin-bottom: 0.5rem;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .form-check-label {
+              text-transform: capitalize;
+              font-weight: 400;
+              font-size: 16px;
+              @media #{$md} {
+                font-size: 15px;
+              }
+              @media #{$sm} {
+                font-size: 14px;
+              }
+            }
+            .form-check-input {
+              border: 1px solid $white;
+              border-radius: 4px;
+              background-color: $secondary-color;
+              &:checked {
+                background-color: $secondary-color;
+                border-color: $white;
+              }
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

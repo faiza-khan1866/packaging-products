@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+.bottom-navigator-wrapper {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .bottom-navigator-wrapper {
+    display: block;
+    margin-top: 56px;
+    .navbar {
+      background: $white;
+      box-shadow: 0px -4px 6px -2px #ccc;
+      .navbar-nav {
+        display: contents;
+        .nav-link {
+          color: $secondary-color;
+          font-weight: 500;
+          .tab-icon {
+            font-size: 24px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../../styles/variables";
+.product-wrape {
+  .main-title {
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 2rem;
+    @media #{$xsm} {
+      font-size: 25px;
+      margin-bottom: 1rem;
+    }
+    @media #{$lsm} {
+      font-size: 25px;
+    }
+    @media #{$md} {
+      font-size: 28px;
+    }
+  }
+  .show-result {
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    @media #{$sm} {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+    @media #{$md} {
+      font-size: 15px;
+    }
+  }
+  .product-item {
+    text-align: center;
+    margin-bottom: 2rem;
+    .img_wrape {
+      position: relative;
+      figure {
+        height: 343px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        img {
+          object-fit: cover;
+          transition: all 0.9s ease;
+          width: 100%;
+          height: 100%;
+        }
+        .hoverImg {
+          position: absolute;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .buy-now-btn {
+        position: absolute;
+        padding: 10px;
+        background: $white;
+        color: $black;
+        border: 0;
+        border-radius: 0;
+        font-weight: 600;
+        font-size: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+        transform: translateY(50px);
+        transition: 0.5s;
+        opacity: 0;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 1.5rem 0 0.7rem 0;
+      text-transform: capitalize;
+      @media #{$sm, $md} {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+      text-transform: capitalize;
+      @media #{$sm} {
+        font-size: 14px;
+      }
+      @media #{$md} {
+        font-size: 15px;
+      }
+    }
+    &:hover {
+      .hoverImg {
+        opacity: 1 !important;
+      }
+      .buy-now-btn {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  }
+  .view-more-btn {
+    border-radius: 5px;
+    background-color: $white;
+    border-color: $secondary-color;
+    color: $secondary-color;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    &:hover {
+      background-color: $secondary-color;
+      color: $white;
+      border-color: $secondary-color;
+    }
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../styles/variables";
+.careers_forn_sec {
+  figure {
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 0.9s ease;
+      -moz-transition: all 0.9s ease;
+      -o-transition: all 0.9s ease;
+      -ms-transition: all 0.9s ease;
+      transition: all 0.9s ease;
+    }
+    &:hover {
+      img {
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  .query-form-column {
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 2rem;
+      font-size: 32px;
+      font-weight: 600;
+      text-transform: capitalize;
+      @media #{$sm} {
+        font-size: 25px;
+        margin-bottom: 1rem;
+      }
+      @media #{$md} {
+        font-size: 28px;
+      }
+    }
+    .form-label {
+      color: $black;
+      @media #{$xsm} {
+        font-size: 14px;
+      }
+    }
+    .form-control {
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      color: $black;
+      padding: calc(0.375rem + 2px) calc(0.75rem + 2px);
+      &::placeholder {
+        color: $black;
+      }
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $secondary-color;
+      }
+    }
+    .input-group-text {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      color: var(--black);
+      background: transparent;
+      border-left: 0;
+      cursor: pointer;
+    }
+    .btn-submit {
+      border-radius: 0;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $white;
+      text-transform: capitalize;
+      font-weight: 500;
+      margin: auto;
+      padding: 0.5rem 2rem;
+      display: block;
+      border-radius: 4px;
+      outline: 0;
+      box-shadow: 0;
+      margin-top: 2rem;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+      &:hover {
+        color: $secondary-color;
+        background: $white;
+      }
+    }
+  }
+}

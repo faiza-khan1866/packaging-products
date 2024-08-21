@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+.faq-wrape {
+  background: $secondary-color;
+  .main-title {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 2rem;
+    color: $white;
+    text-align: center;
+    @media #{$xsm, $lsm} {
+      font-size: 25px;
+    }
+    @media #{$md} {
+      font-size: 28px;
+    }
+  }
+  .accordion {
+    .accordion-item {
+      background-color: transparent;
+      color: $white;
+      .accordion-header {
+        .accordion-button {
+          font-size: 18px;
+          font-weight: 400;
+          background: transparent;
+          color: $white;
+          border-bottom: 1px solid $white;
+          box-shadow: none;
+          &:not(.collapsed) {
+            color: inherit;
+            box-shadow: none;
+            border: 0;
+            background-color: transparent;
+          }
+          &::after {
+            background-image: url("../../assets/images/icons/arrowdown.png");
+          }
+        }
+      }
+      .accordion-body {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          text-align: justify;
+          margin: 0;
+          @media #{$xsm} {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

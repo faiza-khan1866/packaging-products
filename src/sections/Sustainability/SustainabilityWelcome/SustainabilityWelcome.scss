@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+.sustainability-welcome {
+  .description-wrape {
+    .title {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 31px;
+      margin-bottom: 2rem;
+      @media #{$xsm, $lsm} {
+        font-size: 25px;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+      }
+      @media #{$md} {
+        font-size: 28px;
+        margin-top: 2rem;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: justify;
+      @media #{$xsm} {
+        font-size: 14px;
+      }
+    }
+    .icons-wrape {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @media #{$xsm} {
+        flex-direction: column;
+        justify-content: center;
+        img {
+          &:first-of-type {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

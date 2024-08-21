@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+.about-welcome {
+  .description-wrape {
+    .title {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 32px;
+      @media #{$xsm, $lsm} {
+        font-size: 25px;
+      }
+      @media #{$md} {
+        font-size: 28px;
+      }
+    }
+    .description {
+      margin-top: 2rem;
+      font-size: 16px;
+      margin-bottom: 0;
+      p {
+        text-align: justify;
+      }
+      @media #{$xsm} {
+        margin-top: 1rem;
+        font-size: 14px;
+      }
+      @media #{$lsm} {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background-image: url("../../../assets/images/icons/playIcon.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+}

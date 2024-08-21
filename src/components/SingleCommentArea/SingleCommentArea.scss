@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+.single_comment_wrape {
+  margin-top: 2rem;
+  .commentHeading {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .single_comment {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    .commentProfile {
+      max-width: 60px;
+      max-height: 60px;
+      img {
+        border-radius: 50px;
+      }
+    }
+
+    .comment_details {
+      .comment_title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      .comment_date {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+      .comment_area {
+        font-size: 14px;
+        font-weight: 400;
+        color: $sub-heading-color;
+      }
+    }
+  }
+}

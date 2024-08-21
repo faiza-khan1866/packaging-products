@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Calibri";
+  src: local("Calibri Regular"), local("Calibri-Regular"),
+    url("./Calibri.woff2") format("woff2"), url("./Calibri.woff") format("woff"),
+    url("./Calibri.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clarendon BT Bold";
+  src: local("Clarendon BT Bold"), local("Clarendon BT Bold"),
+    url("./clarendon-bt-bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}

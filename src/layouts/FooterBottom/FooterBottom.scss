@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+.footer-bottom-wrape {
+  color: $white;
+  background: $secondary-color;
+  display: flex;
+  // justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  @media #{$sm} {
+    flex-direction: column;
+    justify-content: center;
+    a {
+      margin-bottom: 0.2rem;
+    }
+  }
+  a {
+    font-size: 15px;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+  p {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../styles/variables";
+.sustaiability-features-wrape {
+  p {
+    font-weight: 400;
+    margin-top: 2rem;
+    font-size: 18px;
+    color: $secondary-color;
+    @media #{$sm, $md} {
+      text-align: center;
+    }
+  }
+
+  .sustaiability-features {
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: $secondary-color;
+    @media #{$sm, $md} {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    img {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background: $secondary-color;
+      color: $white;
+      img {
+        animation: scaleDisappear 0.3s;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    @keyframes scaleDisappear {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      60% {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}

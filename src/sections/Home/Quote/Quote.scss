@@ -1,0 +1,44 @@
+@import "../../../styles/variables";
+.quote-wrape {
+  background: $white;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  margin-top: -22px;
+  position: relative;
+  @media #{$xsm, $lsm, $md} {
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+    @media #{$xsm} {
+      padding-bottom: 1rem;
+      text-align: center;
+      font-size: 25px;
+    }
+    @media #{$lsm} {
+      font-size: 25px;
+    }
+    @media #{$md} {
+      font-size: 28px;
+    }
+  }
+  .vertline {
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    @media #{$xsm} {
+      border-right: 0;
+    }
+  }
+  .quotedes {
+    padding-left: 2rem;
+    @media #{$xsm, $lsm, $md} {
+      padding-left: calc(1.5rem * 0.5);
+    }
+    @media #{$md} {
+      padding-left: 1.5rem;
+    }
+  }
+}

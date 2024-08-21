@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+.common_banner {
+  // position: relative;
+  // height: 265px;
+  min-height: 22rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @media #{$sm, $md} {
+    // background-size: 100% 100%;
+    min-height: 16rem;
+  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(0, 0, 0, 0.3);
+  // }
+  .Banner_text {
+    color: $white;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    @media #{$xsm} {
+      font-size: 25px;
+    }
+    @media #{$lsm, $md} {
+      font-size: 28px;
+    }
+  }
+}

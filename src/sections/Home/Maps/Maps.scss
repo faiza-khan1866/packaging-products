@@ -1,0 +1,87 @@
+@import "../../../styles/variables";
+.map-tabs {
+  background: $white;
+  .btn-wrape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btnstyle {
+      border-radius: 0;
+      background-color: $white;
+      border-color: $white;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 100%;
+      display: block;
+      padding: 1rem 0;
+      font-size: 18px;
+      @media #{$xsm} {
+        font-size: 16px;
+      }
+      &.active {
+        background-color: $secondary-color;
+        color: $white;
+        border-color: $secondary-color;
+      }
+      &:hover {
+        color: $secondary-color;
+        border-color: $secondary-color;
+        &.active {
+          color: $white;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+  }
+  .saudi-wrape {
+    position: relative;
+    .saudi-dropdown {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      width: 30%;
+      background: $secondary-color;
+      color: $white;
+      border-radius: 8px;
+      @media #{$sm} {
+        width: 60%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+      }
+      @media #{$md} {
+        width: 40%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+      }
+      .inner-btn {
+        border-radius: 50px;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: $white;
+        text-transform: capitalize;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        padding: 1rem 0;
+        font-size: 16px;
+
+        &:hover,
+        &.active {
+          background-color: $white;
+          color: $black;
+          border-color: $white;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+      }
+    }
+  }
+}

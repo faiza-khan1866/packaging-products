@@ -1,0 +1,189 @@
+@import "../../../styles/variables";
+.product-detail-wrape {
+  .detail-wrape {
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid $secondary-color;
+    h2 {
+      font-size: 30px;
+      color: $secondary-color;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      @media #{$sm} {
+        font-size: 25px;
+        margin-top: 2rem;
+      }
+
+      @media #{$md} {
+        font-size: 28px;
+        margin-top: 2rem;
+      }
+    }
+    .description {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 1rem;
+      @media #{$xsm} {
+        font-size: 14px;
+      }
+    }
+    .product-code {
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      @media #{$xsm} {
+        font-size: 14px;
+      }
+    }
+    .availabilty {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      .out_stock {
+        color: #ff0000;
+      }
+      .in_stock {
+        color: #12a05c;
+      }
+    }
+    .price {
+      color: $secondary-color;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+    .rating {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      span {
+        margin-right: 0.5rem;
+      }
+      p {
+        color: $secondary-color;
+        margin: 0 0 0 0.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: capitalize;
+        letter-spacing: 2.32px;
+      }
+    }
+  }
+  .variations-wrape {
+    padding: 2rem 0;
+    border-bottom: 1px solid $secondary-color;
+    .form-label {
+      color: $secondary-color;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2.32px;
+    }
+    .form-control {
+      border: 1px solid rgba(97, 153, 59, 0.5);
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $secondary-color;
+      padding: 0.5rem;
+      letter-spacing: 2.32px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .form-select {
+      border: 1px solid rgba(97, 153, 59, 0.5);
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $secondary-color;
+      padding: 0.5rem;
+      letter-spacing: 2.32px;
+      background-image: url("../../../assets/images/icons/select_icon.png");
+      background-size: 20px 20px;
+      background-position: right 0.45rem center;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .quantity-wrape {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .inc-btn {
+        background: transparent;
+        color: $secondary-color;
+        border: 1px solid rgba(97, 153, 59, 0.5);
+        border-radius: 5px;
+        padding: 0.3rem 0.5rem 0.5rem 2rem;
+        border-left: 0 !important;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .dec-btn {
+        background: transparent;
+        color: $secondary-color;
+        border: 1px solid rgba(97, 153, 59, 0.5);
+        border-radius: 5px;
+        padding: 0.3rem 2rem 0.5rem 0.5rem;
+        border-right: 0 !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .quantity {
+        font-size: 18px;
+        color: $black;
+        font-weight: 400;
+        border: 1px solid rgba(97, 153, 59, 0.5);
+        padding: 0.31rem 2.1rem;
+      }
+    }
+    .quote-btn {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $white;
+      text-transform: capitalize;
+      font-weight: 500;
+      margin: auto;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      letter-spacing: 2.32px;
+      margin-top: 1rem;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+      &:hover {
+        color: $secondary-color;
+        background: $white;
+      }
+    }
+  }
+  .share-section {
+    padding: 2rem 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+    gap: 8px;
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 6px;
+      .copy_icon {
+        cursor: pointer;
+        color: gray;
+        background: rgba(0, 61, 77, 0.2);
+        padding: 0.1rem 0.3rem;
+        border-radius: 50px;
+      }
+    }
+  }
+}

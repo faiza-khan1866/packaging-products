@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+.tags_share_wrape {
+  border-top: 1px solid rgb(170, 170, 170);
+  border-bottom: 1px solid rgb(170, 170, 170);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media #{$xsm} {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media #{$xsm} {
+      margin-bottom: 0.5rem;
+    }
+    .tags_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      color: $black;
+      font-weight: 500;
+      gap: 8px;
+    }
+  }
+  .shareButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 8px;
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 6px;
+    }
+  }
+}

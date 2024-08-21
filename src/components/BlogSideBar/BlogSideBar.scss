@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+.Blog_side_bar {
+  .search-wrape {
+    margin-bottom: 2rem;
+    .form-control {
+      font-size: 15px;
+      font-weight: 400;
+      border: 1px solid $black;
+      border-radius: 0;
+      color: $black;
+      padding: 0.5rem 1rem;
+      border-right: 0;
+      &::placeholder {
+        color: $black;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+    .input-group-text {
+      color: $black;
+      background: transparent;
+      border: 1px solid $black;
+      border-radius: 0;
+    }
+  }
+
+  .recent_blog_wrape {
+    margin-bottom: 2rem;
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+    .recent_blog {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 0.5px solid $black;
+
+      .blog_thumbnail {
+        img {
+          height: 60px;
+          width: 108px;
+        }
+      }
+      .blog_detail {
+        margin-left: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .blog_detail_title {
+          font-size: 12px;
+          font-weight: 400;
+          color: $sub-heading-color;
+          text-transform: capitalize;
+        }
+        .blog_detail_subTitle {
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: capitalize;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .blog_categories {
+    @media #{$sm} {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+    .single_Category {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .category {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        input {
+          width: max-content;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 20px;
+        }
+      }
+      .category_total {
+        margin-left: 4rem;
+        span {
+          background-color: $category-bg;
+          color: $heading-color;
+          padding: 2px 15px;
+          border-radius: 25px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import "../../../styles/variables";
+.contact-map-wrape {
+  .btn-wrape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btnstyle {
+      border-radius: 0;
+      background-color: $white;
+      border-color: $white;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 100%;
+      display: block;
+      padding: 0.5rem 0;
+      font-size: 18px;
+      @media #{$xsm} {
+        font-size: 16px;
+      }
+      &.active {
+        background-color: $secondary-color;
+        color: $white;
+        border-color: $secondary-color;
+      }
+      &:hover {
+        color: $secondary-color;
+        border-color: $secondary-color;
+        &.active {
+          color: $white;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+  }
+  .map-content {
+    margin-top: 2rem;
+    color: $black;
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      @media #{$xsm} {
+        font-size: 14px;
+      }
+    }
+    .title {
+      font-size: 32px;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      @media #{$xsm, $lsm} {
+        font-size: 25px;
+      }
+      @media #{$md} {
+        font-size: 28px;
+      }
+    }
+    .detail {
+      text-transform: capitalize;
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.065em;
+      @media #{$xsm} {
+        font-size: 16px;
+      }
+    }
+    .map-info1 {
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.065em;
+      p {
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        @media #{$xsm} {
+          font-size: 14px;
+        }
+        a {
+          text-decoration: none;
+          color: $black;
+          font-weight: 400;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    .map-info2 {
+      letter-spacing: 0.065em;
+      p {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        @media #{$xsm} {
+          font-size: 14px;
+        }
+        a {
+          text-decoration: none;
+          color: $black;
+          font-weight: 400;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+  .saudi-wrape {
+    position: relative;
+    .saudi-dropdown {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -40%);
+      width: 39%;
+      background: $secondary-color;
+      color: $white;
+      border-radius: 8px;
+      @media #{$sm} {
+        width: 60%;
+      }
+      .inner-btn {
+        border-radius: 50px;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: $white;
+        text-transform: capitalize;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 15px;
+
+        &:hover,
+        &.active {
+          background-color: $white;
+          color: $black;
+          border-color: $white;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+      }
+    }
+  }
+  .map-space {
+    margin-top: 4rem;
+  }
+}

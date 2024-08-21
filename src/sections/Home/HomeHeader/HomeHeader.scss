@@ -1,0 +1,98 @@
+@import "../../../styles/variables";
+.bannerslider {
+  .slick-dots {
+    position: absolute;
+    bottom: 10%;
+    li {
+      button {
+        &::before {
+          color: $white;
+          opacity: 1;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $secondary-color;
+    opacity: 1;
+  }
+  .home-header {
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    @media #{$sm} {
+      height: 60vh;
+    }
+    @media #{$md} {
+      height: 40vh;
+    }
+    .background-overlay {
+      animation: zoomIn 10s infinite;
+    }
+
+    .description-wrape {
+      color: $white;
+      padding: 1rem;
+      background: rgba(91, 184, 28, 0.5);
+      width: max-content;
+      max-width: 50%;
+      min-width: 40%;
+      @media #{$sm} {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      @media #{$md} {
+        max-width: 70%;
+        min-width: 60%;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 30px;
+        text-transform: capitalize;
+        @media #{$sm} {
+          font-size: 28px;
+        }
+        @media #{$md} {
+          font-size: 30px;
+        }
+      }
+
+      .shop-now-btn {
+        border-radius: 5px;
+        font-size: 18px;
+        background-color: $white;
+        border-color: $white;
+        color: $black;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: 0.5rem 2rem;
+        &:hover {
+          background-color: $secondary-color;
+          color: $white;
+          border-color: $secondary-color;
+        }
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
